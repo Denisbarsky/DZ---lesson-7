@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 5</h1>
+    <p>
+      Задача 5. Створити окремі функції, які переводять: Сантиметри у дюйми;
+      Кілограми у фунти; Кілометри у милі.
+    </p>
+    <script>
+      function convertCmToInch(cm) {
+        const inchPerCm = 0.3937; // кількість дюймів у одному сантиметрі
+        return cm * inchPerCm; // перетворення сантиметрів у дюйми
+      }
+
+      function convertKgToLb(kg) {
+        const lbPerKg = 2.20462; // кількість фунтів у одному кілограмі
+        return kg * lbPerKg; // перетворення кілограмів у фунти
+      }
+
+      function convertKmToMi(km) {
+        const miPerKm = 0.621371; // кількість миль у одному кілометрі
+        return km * miPerKm; // перетворення кілометрів у милі
+      }
+
+      let numDuim = parseFloat(prompt(`Введіть кількість дюймів =`));
+      let numFunt = parseFloat(prompt(`Введіть кількість фунтів =`));
+      let numMille = parseFloat(prompt(`Введіть кількість миль`));
+
+      const initialValuesCmToInch = convertCmToInch(numDuim);
+      const initialValuesKgToLb = convertKgToLb(numFunt);
+      const initialValuesKmToMi = convertKmToMi(numMille);
+      document.write(`Кількість дюймів в сантиметрі = ${initialValuesCmToInch}, <br>
+      Кількість фунтів в кілограмі = ${initialValuesKgToLb}, <br>
+      Кількість миль в кілометрі = ${numMille} `);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 3</h1>
+    <p>
+      Створити окремі функції, які для 4 чисел знаходять: 1)суму; 2)добуток;
+      3)середнє арифметичне; 4)мінімальне значення.
+    </p>
+    <script>
+      function getSum(a, b, c, d) {
+        return a + b + c + d;
+      }
+      function getMultiply(a, b, c, d) {
+        return a * b * c * d;
+      }
+      function getArMine(a, b, c, d) {
+        return (a + b + c + d) / 4;
+      }
+      function getMinValue(a, b, c, d) {
+        let minValueDefault = a;
+        if (b < minValueDefault) minValueDefault = b;
+        if (c < minValueDefault) minValueDefault = c;
+        if (d < minValueDefault) minValueDefault = d;
+        return minValueDefault;
+      }
+      let numOne = parseInt(prompt(`Введіть перше число`));
+      let numTwo = parseInt(prompt(`Введіть друге число`));
+      let numTree = parseInt(prompt(`Введіть третьє число`));
+      let numFour = parseInt(prompt(`введіть четверте число`));
+
+      const funOne = getSum(numOne, numTwo, numTree, numFour);
+      const funTwo = getMultiply(numOne, numTwo, numTree, numFour);
+      const funTree = getArMine(numOne, numTwo, numTree, numFour);
+      const funFour = getArMine(numOne, numTwo, numTree, numFour);
+
+      document.write(`Сума чисел = ${funOne}`);
+      document.write(`Добуток чисел = ${funTwo}`);
+      document.write(`Середне арифметичне = ${funTree}`);
+      document.write(`Мінімальне значення = ${funFour}`);
+    </script>
+  </body>
+</html>

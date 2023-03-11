@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 4</h1>
+    <p>
+      Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька
+      результатів: кількість парних,<br />
+      кількість додатних, кількість більших за 100
+    </p>
+    <script>
+      const numOne = parseInt(prompt(`Введіть перше число`));
+      const numTwo = parseInt(prompt(`Введіть друге число`));
+      const numTree = parseInt(prompt(`Введіть третьє число`));
+      function getResult(a, b, c) {
+        let quantOfEven = 0;
+        let quantOfPositive = 0;
+        let quantOfGreaterHundred = 0;
+
+        if (a % 2 === 0) {
+          quantOfEven++;
+        }
+        if (b % 2 === 0) {
+          quantOfEven++;
+        }
+        if (c % 2 === 0) {
+          quantOfEven++;
+        }
+
+        if (a > 0) {
+          quantOfPositive++;
+        }
+        if (b > 0) {
+          quantOfPositive++;
+        }
+        if (c > 0) {
+          quantOfPositive++;
+        }
+
+        if (a > 100) {
+          quantOfGreaterHundred++;
+        }
+        if (b > 100) {
+          quantOfGreaterHundred++;
+        }
+        if (c > 100) {
+          quantOfGreaterHundred++;
+        }
+
+        return `${quantOfEven}, ${quantOfPositive}, ${quantOfGreaterHundred}`;
+      }
+
+      const result = getResult(numOne, numTwo, numThree);
+      document.write(result);
+    </script>
+  </body>
+</html>
